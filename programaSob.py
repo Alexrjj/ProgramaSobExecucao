@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 import openpyxl
 from selenium.common.exceptions import NoSuchElementException
 from selenium import webdriver
@@ -142,7 +142,7 @@ if __name__ == '__main__':
                     driver.find_element_by_xpath("*//tr/td[contains(text(), '" + str(cell.value) + "')]/preceding-sibling::td/input").click()
                     webdriver.ActionChains(driver).send_keys(Keys.TAB).perform()
                     webdriver.ActionChains(driver).send_keys(str(cell2.value)).perform()
-                except NoSuchElementException:  # Caso não encontre, abre o arquivo txt e registra o código baremo e sua quantidade
+                except NoSuchElementException:  # Caso não encontre, abre o arquivo txt e registra a data, o código baremo e sua quantidade
                     log = open("BaremosPendentes.txt", "a")
                     log.write(str(sheet['G1'].value) + " " + str(sheet['A1'].value) + " " + str(cell.value) + " " + str(cell2.value) + "\n")
                     log.close()
