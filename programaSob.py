@@ -1,4 +1,5 @@
 ﻿# -*- coding: utf-8 -*-
+import time
 import openpyxl
 from selenium.common.exceptions import NoSuchElementException
 from selenium import webdriver
@@ -97,8 +98,11 @@ if __name__ == '__main__':
 
         # Adiciona técnicos à tarefa
         driver.find_element_by_id('ctl00_ContentPlaceHolder1_imgBtnGravarTecnicos').click()
+        time.sleep(0.5)
         driver.find_element_by_id('ctl00_ContentPlaceHolder1_gridViewTecnicos_ctl01_ChkBoxAll').click()
+        time.sleep(0.5)
         driver.find_element_by_id('ctl00_ContentPlaceHolder1_Button1').click()
+        time.sleep(0.5)
         driver.find_element_by_id('ctl00_ContentPlaceHolder1_btnVoltar').click()
 
         # Identifica o menu "Tipo de Programação" e seleciona a opção "Execução de Obra"
