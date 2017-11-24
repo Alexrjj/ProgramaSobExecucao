@@ -51,7 +51,6 @@ if __name__ == '__main__':
             compel = driver.find_element_by_xpath("//*[contains(text(), 'COMPEL CONSTRUÇÕES MONTAGENS E')]")
             webdriver.ActionChains(driver).click(compel).perform()
 
-            print("Linha encontrada")
             m = 0
             while m <= 8:
                 webdriver.ActionChains(driver).send_keys(Keys.TAB).perform()
