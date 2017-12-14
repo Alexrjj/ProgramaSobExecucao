@@ -154,7 +154,7 @@ if __name__ == '__main__':
                     webdriver.ActionChains(driver).send_keys(str(cell2.value)).perform()
                 except NoSuchElementException:  # Caso não encontre, abre o arquivo txt e registra a data, o código baremo e sua quantidade
                     log = open("BaremosPendentes.txt", "a")
-                    log.write(str(sheet['G1'].value) + " " + str(sheet['A1'].value) + " " + str(cell.value) + " " + str(cell2.value) + "\n")
+                    log.write(str(sheet['H1'].value) + " " + str(sheet['A1'].value) + " " + str(cell.value) + " " + str(cell2.value) + "\n")
                     log.close()
                 continue
         #  Ao fim do loop de inserção de baremos, clica no botão "registrar programação"
